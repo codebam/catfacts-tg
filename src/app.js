@@ -12,16 +12,16 @@ const constructRequest = (requestTitle, content) => [{
   type: 'article',
 }];
 
-const constructKanyeRequest = constructRequest.bind(null, 'Kanye says...');
+const constructCatRequest = constructRequest.bind(null, 'Did you know...');
 
 const sendToTelegram = (b, id, quote) => b.telegram.answerInlineQuery(id,
-  constructKanyeRequest(quote), { cache_time: 0 });
+  constructCatRequest(quote), { cache_time: 0 });
 
 const bot = new Telegraf(token);
 
-bot.on('inline_query', ctx => fetch('https://api.kanye.rest')
+bot.on('inline_query', ctx => fetch('https://the-cat-fact.herokuapp.com/api/randomfact')
   .then(resp => resp.json())
-  .then(json => json.quote)
-  .then(quote => sendToTelegram(bot, ctx.update.inline_query.id, quote)));
+  .then(json => json.data[0].fact)
+  .then(fact => sendToTelegram(bot, ctx.update.inline_query.id, fact)));
 
 bot.launch();

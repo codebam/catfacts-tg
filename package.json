@@ -1,7 +1,7 @@
 {
-  "name": "kanye-tg",
+  "name": "catfacts-tg",
   "version": "1.0.0",
-  "description": "Kanye West as a Telegram bot",
+  "description": "Cat facts as a Telegram bot",
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
@@ -9,21 +9,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codebam/kanye-tg.git"
+    "url": "git+https://github.com/codebam/catfacts-tg.git"
   },
   "keywords": [
-    "kanye",
-    "west",
-    "ye",
+    "cat",
+    "cats",
+    "catfacts",
+    "facts",
     "telegram",
     "bot"
   ],
   "author": "Sean Behan",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/codebam/kanye-tg/issues"
+    "url": "https://github.com/codebam/catfacts-tg/issues"
   },
-  "homepage": "https://github.com/codebam/kanye-tg#readme",
+  "homepage": "https://github.com/codebam/catfacts-tg#readme",
   "dependencies": {
     "node-fetch": "^2.3.0",
     "node-telegram-bot-api": "^0.30.0",
