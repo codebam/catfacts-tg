@@ -22,6 +22,7 @@ const bot = new Telegraf(token);
 bot.on('inline_query', ctx => fetch('https://the-cat-fact.herokuapp.com/api/randomfact')
   .then(resp => resp.json())
   .then(json => json.data[0].fact)
-  .then(fact => sendToTelegram(bot, ctx.update.inline_query.id, fact)));
+  .then(fact => sendToTelegram(bot, ctx.update.inline_query.id, fact)))
+  .catch(console.log);
 
 bot.launch();
