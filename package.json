@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/codebam/catfacts-tg#readme",
   "dependencies": {
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "node-telegram-bot-api": "^0.30.0",
     "telegraf": "^3.32.0"
   },
